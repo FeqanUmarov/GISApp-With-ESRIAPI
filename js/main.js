@@ -110,7 +110,7 @@ require(["esri/Map", "esri/layers/GeoJSONLayer", "esri/views/MapView", "esri/wid
     },
     visible: false
   });
-  // Yeni grafiklerin ekleyeceği grafik katmanı oluşturma
+  // 
   var graphicsLayer = new GraphicsLayer();
 
   const map = new Map({
@@ -146,14 +146,14 @@ require(["esri/Map", "esri/layers/GeoJSONLayer", "esri/views/MapView", "esri/wid
 
 
 
-  // Düzenleyici aracını oluşturma
+  // 
   var sketch = new Sketch({
     view: view,
     layer: graphicsLayer,
     creationMode: "click",
-    // Yeni grafiklerin oluşturulabileceği geometri türleri
+    //
     creationMode: "update",
-    // Oluşturulan grafiklerin düzenlenebileceği geometri türleri
+    // 
     updateOnGraphicClick: true,
     allowedGeometries: ["polygon", "polyline"],
     snappingOptions: { // autocasts to SnappingOptions()
@@ -170,7 +170,7 @@ require(["esri/Map", "esri/layers/GeoJSONLayer", "esri/views/MapView", "esri/wid
 
 
 
-  // Düzenleyici aracını görünüme ekleme
+  //
   view.ui.add(sketch, "top-left");
 
 
